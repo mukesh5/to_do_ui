@@ -1,5 +1,4 @@
-# A Simple and basic UI for a To Do App Using React Hooks
-
+# A Simple and basic UI for a To Do App Using React
 ## Setup
 
 ### 1. Clone the Repo
