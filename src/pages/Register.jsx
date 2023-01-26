@@ -31,7 +31,7 @@ export const Register = (props) => {
             email: email,
             password: password
         }
-        axios.post(`${BASE_URL}/register_user`, payload, config).then(res =>{
+        axios.post(`${BASE_URL}/user/register`, payload, config).then(res =>{
             alert('You are successfully registered')
             localStorage.setItem('token', res.data?.token)
             props.setAuthentication(true)

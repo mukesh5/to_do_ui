@@ -13,7 +13,7 @@ export const TaskList = (props) => {
     }
 
     useEffect(() => {
-        axios.get(`${BASE_URL}/all_tasks`, config).then(res => {
+        axios.get(`${BASE_URL}/tasks/all`, config).then(res => {
             setTaskList(res.data)
         }).catch(err => {
             console.log(err)
@@ -24,7 +24,7 @@ export const TaskList = (props) => {
         const payload = {
             isCompleted: !task.isCompleted
         }
-        axios.patch(`${BASE_URL}/update/${task.id}`, payload, config).then(res => {
+        axios.patch(`${BASE_URL}/tasks/update/${task.id}`, payload, config).then(res => {
             alert("Congrats on Completing the task!!")
             props.updateTaskList(!props.updateList)
         }).catch(err => {
@@ -39,7 +39,7 @@ export const TaskList = (props) => {
     }
 
     const deleteTask = (task) => {
-        axios.delete(`${BASE_URL}/delete/${task.id}`, config).then(res =>{
+        axios.delete(`${BASE_URL}/tasks/delete/${task.id}`, config).then(res =>{
             alert('Task deleted successfully!')
             props.updateTaskList(!props.updateList)
         })

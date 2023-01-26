@@ -24,7 +24,7 @@ export const Login = (props) => {
                 email: email,
                 password: password
             }
-            axios.post(`${BASE_URL}/login`, payload, config).then(res =>{
+            axios.post(`${BASE_URL}/user/login`, payload, config).then(res =>{
                 alert('You are successfully logged in')
                 localStorage.setItem('token', res.data?.token)
                 props.setAuthentication(true)

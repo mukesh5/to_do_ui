@@ -33,7 +33,7 @@ export const AddTask = (props) => {
                 description: task
             }
             if(!props.editTask){
-                axios.post(`${BASE_URL}/add_task`, payload, config).then(res =>{
+                axios.post(`${BASE_URL}/tasks/add`, payload, config).then(res =>{
                     alert("task added successfully")
                     setTask("")
                     console.log('updating flag to get data')
@@ -45,7 +45,7 @@ export const AddTask = (props) => {
                 })
             }
             else{
-                axios.patch(`${BASE_URL}/update/${props.editTask?.id}`, payload, config).then(res => {
+                axios.patch(`${BASE_URL}/tasks/update/${props.editTask?.id}`, payload, config).then(res => {
                     alert("Task updated successfully!")
                     setTask("")
                     props.handleEditTask(null)
