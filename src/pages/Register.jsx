@@ -57,7 +57,7 @@ export const Register = (props) => {
                 <input value={password} type="password" placeholder="*****" name="password" required onChange={(e) => setPassword(e.target.value)}/>
                 <button>Register</button>
             </form>
-            <button onClick={() => props.togglePage('login')}>Have An Account? Login</button>
+            <button className='link-button' onClick={() => props.togglePage('login')}>Have An Account? Login</button>
         </div>
     )
 }

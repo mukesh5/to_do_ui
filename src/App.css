@@ -32,3 +32,8 @@ button {
   border-radius: 10px;
   cursor: pointer;
 }
+
+.link-button {
+  background: none;
+  text-decoration: underline;
+}
